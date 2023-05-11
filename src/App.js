@@ -1,11 +1,10 @@
 import './App.css';
-import Login from './components/Login/Login';
-import PopupMessage from './components/Mainpage/PopupMessage/PopupMessage';
+import SignUp from './components/Login/SignUp';
 
 function App() {
   return (
     <div className="App">
-      <Login />
+      <SignUp />
     </div>
   );
 }
