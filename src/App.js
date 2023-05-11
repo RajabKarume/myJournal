@@ -1,10 +1,10 @@
 import './App.css';
-import Input from './components/Mainpage/Input/Input';
+import PopupMessage from './components/Mainpage/PopupMessage/PopupMessage';
 
 function App() {
   return (
     <div className="App">
-      <Input />
+      <PopupMessage />
     </div>
   );
 }
