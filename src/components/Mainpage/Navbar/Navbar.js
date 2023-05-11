@@ -2,7 +2,7 @@ import React from "react";
 import './Navbar.css'
 import Button from "../../Button/Button";
 
-function Navbar(){
+function Navbar({name}){
 
     return(
         <div className="navbar-div">
@@ -10,7 +10,7 @@ function Navbar(){
                 <h1>My Journal</h1>
             </div>
             <div className="user-display">
-                <h1>Rajab</h1>
+                <h1>{name}</h1>
             </div>
             <div className="logout-button">
                 <Button  buttonText={"logout"} />
