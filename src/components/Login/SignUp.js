@@ -4,6 +4,7 @@ import Button from "../Button/Button";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth, db} from '../../firebaseConfig';
 import { doc, setDoc } from "firebase/firestore"; 
+import { Link, useNavigate } from "react-router-dom";
 
 function SignUp(){
 
@@ -12,6 +13,7 @@ function SignUp(){
     const [displayName, setDisplayName] = useState("")
     const [err, setErr] = useState(false)
     const [signUpButton, setSignUpButton] = useState("Sign In")
+    const navigate = useNavigate()
 
     const handleSubmit = async (e)=> {
         e.preventDefault()
@@ -34,6 +36,7 @@ function SignUp(){
             } catch(err){
                 console.log("db error")
             }
+            navigate('/login')
         } catch (err){
             setErr(true)
             console.log("error")
@@ -64,7 +67,7 @@ function SignUp(){
                 {err? <p>Sign Up error </p>: <p></p>}
                 </div>
                 <div className='span-div'>
-                    <span >LogIn to your account</span>
+                    <span > <Link to={'/login'}>Login to your an account</Link> </span>
                 </div>
             
         </div>

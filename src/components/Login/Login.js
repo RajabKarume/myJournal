@@ -3,6 +3,7 @@ import './Login.css'
 import Button from "../Button/Button";
 import { auth } from "../../firebaseConfig";
 import { signInWithEmailAndPassword } from "firebase/auth";
+import { Link, useNavigate } from "react-router-dom";
 
 
 function Login(){
@@ -11,7 +12,7 @@ function Login(){
     const [password, setPassword] = useState("")
     const [login, setLogin] = useState("Login")
     const [err, setErr] = useState(false)
-   
+    const navigate = useNavigate()
 
     const handleSubmit = async (e)=>{
         e.preventDefault()
@@ -19,7 +20,7 @@ function Login(){
         try{
             await signInWithEmailAndPassword(auth, email, password)
             console.log("login successful")
-            
+            navigate('/')
         } catch(err){
             setErr(true)
         }
@@ -46,7 +47,7 @@ function Login(){
                     {err? <p>Invalid email or password</p>:<span></span>}
                 </div>
                 <div className='span-div'>
-                <span > SignUp for an account </span>
+                <span > <Link to={'/signup'}>SignUp for an account</Link> </span>
                 </div>
             </div>
         </div>
