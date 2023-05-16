@@ -7,7 +7,7 @@ function PopupMessage({ sendMail, setSendMail, message}){
     return (sendMail) ? (
         <div className="popup">
             <div className="popup-container">
-              <p>message</p>
+              <p>{message}</p>
               <Button handleClick={()=>setSendMail(false)} buttonText={"Ok"} />
             </div>
         </div>

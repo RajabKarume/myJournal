@@ -1,0 +1,58 @@
+[debug] [2023-05-16T08:24:17.741Z] ----------------------------------------------------------------------
+[debug] [2023-05-16T08:24:17.743Z] Command:       /home/rajab/.nvm/versions/node/v16.19.0/bin/node /home/rajab/.nvm/versions/node/v16.19.0/bin/firebase init
+[debug] [2023-05-16T08:24:17.743Z] CLI Version:   12.0.0
+[debug] [2023-05-16T08:24:17.744Z] Platform:      linux
+[debug] [2023-05-16T08:24:17.744Z] Node Version:  v16.19.0
+[debug] [2023-05-16T08:24:17.744Z] Time:          Tue May 16 2023 11:24:17 GMT+0300 (East Africa Time)
+[debug] [2023-05-16T08:24:17.744Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-05-16T08:24:17.800Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-05-16T08:24:17.800Z] > authorizing via signed-in user (rkarume@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/rajab/development/Personal/my-journal
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2023-05-16T08:24:32.638Z] Using project from CLI flag: my-journal-c0b42
+[debug] [2023-05-16T08:24:32.641Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/my-journal-c0b42 [none]
+[debug] [2023-05-16T08:24:35.897Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/my-journal-c0b42 200
+[debug] [2023-05-16T08:24:35.897Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/my-journal-c0b42 {"projectId":"my-journal-c0b42","projectNumber":"846998898227","displayName":"my-journal","name":"projects/my-journal-c0b42","resources":{"hostingSite":"my-journal-c0b42","realtimeDatabaseInstance":"my-journal-c0b42-default-rtdb","storageBucket":"my-journal-c0b42.appspot.com","locationId":"asia-south1"},"state":"ACTIVE","etag":"1_a650782a-b5fb-4e5c-bd9d-8f8db7c62fbe"}
+[info] i  Using project my-journal-c0b42 (my-journal) 
+[info] 
+=== Database Setup
+[info] i  database: ensuring required API firebasedatabase.googleapis.com is enabled... 
+[debug] [2023-05-16T08:24:35.907Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/my-journal-c0b42/services/firebasedatabase.googleapis.com [none]
+[debug] [2023-05-16T08:24:35.907Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/my-journal-c0b42/services/firebasedatabase.googleapis.com x-goog-quota-user=projects/my-journal-c0b42
+[debug] [2023-05-16T08:24:42.929Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/my-journal-c0b42/services/firebasedatabase.googleapis.com 200
+[debug] [2023-05-16T08:24:42.930Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/my-journal-c0b42/services/firebasedatabase.googleapis.com [omitted]
+[info] ✔  database: required API firebasedatabase.googleapis.com is enabled 
+[info] 
+[debug] [2023-05-16T08:24:42.931Z] > refreshing access token with scopes: []
+[debug] [2023-05-16T08:24:42.931Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-05-16T08:24:42.932Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-05-16T08:24:44.170Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-05-16T08:24:44.171Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-05-16T08:24:44.193Z] >>> [apiv2][query] GET https://firebasedatabase.googleapis.com/v1beta/projects/my-journal-c0b42/locations/-/instances/my-journal-c0b42-default-rtdb [none]
+[debug] [2023-05-16T08:24:54.206Z] Timeout reached making request to https://firebasedatabase.googleapis.com/v1beta/projects/my-journal-c0b42/locations/-/instances/my-journal-c0b42-default-rtdb
+[debug] [2023-05-16T08:24:54.932Z] FirebaseError: Timeout reached making request to https://firebasedatabase.googleapis.com/v1beta/projects/my-journal-c0b42/locations/-/instances/my-journal-c0b42-default-rtdb
+    at RetryOperation._fn (/home/rajab/.nvm/versions/node/v16.19.0/lib/node_modules/firebase-tools/lib/apiv2.js:238:35)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: Failed to get instance details for instance: my-journal-c0b42-default-rtdb. See firebase-debug.log for more details.
