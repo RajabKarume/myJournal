@@ -13,7 +13,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 80vh;
+    height: 90vh;
     width: 30rem;
     border-radius: 30px;
     background-color: #ffffff;
@@ -26,9 +26,8 @@
 .form-div{
     text-align: start;
     margin-top: 10%;
-    font-size: 30px;
-    font-weight: 700;
-    letter-spacing: 1px;
+    font-size: 20px;
+    font-weight: 500;
     margin-top: -0.4rem;
     color: #000;
 }
@@ -45,7 +44,7 @@
     margin-right: auto;
     padding-left: 10%;
     padding-right: 10%;
-    font-size: 18px;
+    font-size: 13px;
     outline: none;
     border: none;
     color: #000000;
@@ -55,7 +54,7 @@
       inset 3px 3px 5px rgba(94, 104, 121, 0.4);
 }
 h3{
-    font-size: 25px;
+    font-size: 18px;
     text-align: center;
 }
 input{
@@ -82,10 +81,10 @@ input{
         justify-content: center;
     }
     h3{
-        font-size: 18px;
+        font-size: 13px;
     }
     h1{
-        font-size: 25px;
+        font-size: 18px;
         padding-bottom: 10%;
     }
 }
