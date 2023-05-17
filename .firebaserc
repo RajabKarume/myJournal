@@ -1,5 +1,11 @@
 {
   "projects": {
     "default": "my-journal-c0b42"
+  },
+  "targets": {},
+  "etags": {
+    "my-journal-c0b42": {
+      "extensionInstances": {}
+    }
   }
 }

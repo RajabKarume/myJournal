@@ -49,10 +49,10 @@ exports.getEntries = functions.https.onRequest( async (req, res) => {
   });
 });
 
-exports.sendEmail = functions.pubsub.schedule("every day 23:30")
+exports.sendEmail = functions.pubsub.schedule("every day 13:55")
     .onRun(async (context) => {
       try {
-        const response = await axios.get("https://us-central1-journal-6a69e.cloudfunctions.net/getEntries");
+        const response = await axios.get("https://us-central1-my-journal-c0b42.cloudfunctions.net/getEntries");
         const allEntries = response.data;
         const newData = {};
         allEntries.forEach(({newEntry, email}) => {
@@ -73,27 +73,32 @@ exports.sendEmail = functions.pubsub.schedule("every day 23:30")
               return {email, newEntries: filterEntry.map(({newEntry}) =>
                 newEntry)};
             });
-        const message = myData.map((data) => data.newEntries);
-        const email = myData.map((data) => data.email);
-        const mailOption = {
-          from: "dev.tests.karume@gmail.com",
-          to: email,
-          subject: `entries`,
-          html: `<p>${message}</p>`,
-        };
-        return transporter.sendMail(mailOption, (error, data)=>{
-          if (error) {
-            console.log(error);
-            return;
+        // console.log(myData)
+        myData.forEach(({email, newEntries}) => {
+          const mailOption = {
+            from: "dev.tests.karume@gmail.com",
+            to: email,
+            subject: "entries",
+            html: `<p>${newEntries.join(" and ")}</p>`,
+          };
+          try {
+            transporter.sendMail(mailOption, (error, data) => {
+              if (error) {
+                console.log(error);
+                return;
+              }
+              console.log("Sent");
+            });
+          } catch (error) {
+            console.error(error);
           }
-          console.log("Sent");
         });
       } catch (error) {
         console.error(error);
       }
     });
 
-exports.deleteCollection = functions.pubsub.schedule("every day 00:00")
+exports.deleteCollection = functions.pubsub.schedule("every day 14:00")
     .onRun(async (context) => {
       const collectionRef = admin.firestore().collection("entries");
       const batchSize = 500;
