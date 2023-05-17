@@ -14,7 +14,7 @@
     align-items: center;
     justify-content: center;
     height: 90vh;
-    width: 30rem;
+    width: 23rem;
     border-radius: 30px;
     background-color: #ffffff;
     box-shadow: -5px -5px 9px rgba(255, 255, 255, 0.45),
@@ -32,7 +32,7 @@
     color: #000;
 }
 .span-div{
-    margin-top: 5%;
+    margin-top: 1rem;
     border-bottom: 1px solid;
     cursor: pointer;
     font-size: 20px;
@@ -58,7 +58,7 @@ h3{
     text-align: center;
 }
 input{
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 @media (max-width:1000px){
