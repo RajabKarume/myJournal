@@ -6,6 +6,8 @@
 }
 .message-input{
     height: 15rem;
+    overflow: auto;
+    text-align: center;
     width: 45rem;
     padding-left: 45px;
     font-size: 25px;
@@ -20,6 +22,7 @@
 h2{
     color: #A7233A;
 }
+
 @media(max-width:1000px){
     .input-div{
         width: 100%;

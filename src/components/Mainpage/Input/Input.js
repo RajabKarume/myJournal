@@ -50,7 +50,7 @@ function Input(){
         <div className="input-div">
             <form onSubmit={handleSubmit} >
                 <h2>Journal entry</h2>
-                <input type='text' placeholder="Enter your Journal " className="message-input" value={entry} onChange={(e)=> setEntry(e.target.value)} />
+                <textarea maxLength={500} type='text' placeholder="Enter your Journal " className="message-input" value={entry} onChange={(e)=> setEntry(e.target.value)} />
                 <br/>
                 <Button buttonText={send} />
             </form>
