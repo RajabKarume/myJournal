@@ -12,7 +12,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
     position: relative;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 .my-button:hover{
     font-size: 22px;

@@ -14,7 +14,7 @@
     align-items: center;
     justify-content: center;
     height: 80vh;
-    width: 20vw;
+    width: 30rem;
     border-radius: 30px;
     background-color: #ffffff;
     box-shadow: -5px -5px 9px rgba(255, 255, 255, 0.45),
@@ -40,8 +40,11 @@
 }
 .login-input{
     height: 2rem;
-    width: 15rem;
-    padding-left: 45px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10%;
+    padding-right: 10%;
     font-size: 18px;
     outline: none;
     border: none;
@@ -54,6 +57,9 @@
 h3{
     font-size: 25px;
     text-align: center;
+}
+input{
+    margin-bottom: 2rem;
 }
 
 @media (max-width:1000px){
